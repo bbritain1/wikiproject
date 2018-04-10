@@ -16,7 +16,6 @@ class subset(MRJob):
         #article = line.split(" ")[3]
         #user_id = line.split(" ")[6].split("\x1e")[0]
         user_id = line.split(" ")[6]
-        user_id = user_id.split("\u001e")[0]
         user_id = user_id.split("\\u001e")[0]
         yield((user_id + "    " + article_id), 1)
 

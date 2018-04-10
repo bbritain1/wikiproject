@@ -10,7 +10,7 @@ import os
 import re
 
 
-os.chdir("/Users/beaubritain/Desktop/lecture_notes/Distributed/wikiproject")
+os.chdir("/Users/beaubritain/Desktop/lecture_notes/Distributed")
 
 columns = []
 users = []
@@ -26,7 +26,7 @@ with open("output.txt") as f:
         
 #make users unique
 users = list(set(users))
-
+columns = list(set(columns))
     
 df_ = pd.DataFrame(index = users, columns=columns)
 df_ = df_.fillna(0)
